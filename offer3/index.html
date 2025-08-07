@@ -1,1 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PF57B58M');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17293773488"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17293773488');
+    </script>
+    <!-- Event snippet for CRR-WA conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17293773488/ff_0CKTSjoEbELCVqLZA',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Stock Insights</title>
+    <style>
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* your other styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f2f;
+            color: #eee;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 18px;
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .video-container {
+            margin: 15px 0;
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .cta-box {
+            background-color: #0b1a2d;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .cta-box strong {
+            color: #ffb800;
+        }
+
+        .cta-box .highlight {
+            color: #f4b400;
+            font-weight: bold;
+        }
+
+        .cta-input {
+            display: block;
+            padding: 10px;
+            width: 90%;
+            max-width: 360px;
+            margin: 15px auto 0;
+            border-radius: 8px;
+            border: 2px solid #FFD700;
+            background: #001f2f;
+            color: #eee;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #FFD700;
+            color: #001f2f;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            animation: floatPulse 2s ease-in-out infinite;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-btn:hover {
+            background-color: #e6c100;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 60px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .links {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .links a {
+            color: #0d6efd;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        #progress-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .progress-content {
+            background: #001f2f;
+            color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 380px;
+            text-align: left;
+        }
+
+        .progress-content h2 {
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar-group {
+            margin-bottom: 12px;
+        }
+
+        .progress-label {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 10px;
+            width: 0%;
+            background: #FFD700;
+            border-radius: 20px;
+            transition: width 0.4s ease;
+        }
+
+        #popup-modal .modal-btn {
+            animation: floatPulse 2s ease-in-out infinite;
+            background-color: #28a745;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #popup-modal .modal-btn:hover {
+            background-color: #1e7e34;
+        }
+
+        @keyframes floatPulse {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 16px;
+            }
+            
+            .cta-input {
+                width: 85%;
+            }
+            
+            .progress-content {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF57B58M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="container" data-id="03rJfqYh" data-class="WZMrdA">
+    <img src="static/picture/analyst.jpg" alt="Analyst" class="profile-img">
+    <h1>2025 Most Powerful AI for Stock Analysis</h1>
+    <div class="video-container" data-id="PIxIIO0c" data-class="M2up2q">
+        <iframe src="https://www.youtube.com/embed/84-Tk5LyZ8A" allowfullscreen=""></iframe>
+    </div>
+    <div class="cta-box" data-id="mViE4AYL" data-class="VEUxhP">
+        <p><strong>Prediction Accuracy Reaches <span class="highlight">99.8%</span></strong></p>
+        <p>Enter your code or symbol below, and our AI system will complete analysis in just 1.5 seconds.</p>
+        <p>Currently, <span class="highlight">46,863</span> users are viewing the full report for free!</p>
+    </div>
+    <input type="text" class="cta-input" id="stock-input" placeholder="Enter stock code or name">
+    <button class="cta-btn" onclick="startProgress()">Analyze Now</button>
+    <div class="footer-text" data-id="G4loPUJc" data-class="RmARKK">
+        This site provides general investment information and does not offer financial advice. Please evaluate
+        independently and invest at your own discretion.
+    </div>
+    <div class="links" data-id="scyohodf" data-class="ndkRjq">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+    </div>
+</div>
+
+<!-- Progress Modal -->
+<div id="progress-modal" data-id="heJy3KYx" data-class="vFXzGR">
+    <div class="progress-content" data-id="zCCYBtVR" data-class="nHKg1O">
+        <h2>Analysis in progress...</h2>
+        <div class="progress-bar-group" data-id="yrzy6GjJ" data-class="cEpmNO">
+            <div class="progress-label" data-id="1TUhRzSe" data-class="brmfJJ">Market Analysis</div>
+            <div class="progress-bar" data-id="4XfV0Wln" data-class="aQl0x3">
+                <div class="progress-fill" id="bar1" data-id="52wiiqHa" data-class="6umIIU"></div>
+            </div>
+        </div>
+        <div class="progress-bar-group" data-id="zrX6C7a4" data-class="HZXgVz">
+            <div class="progress-label" data-id="HZBaUYKE" data-class="hJWfcZ">Chart Review</div>
+            <div class="progress-bar" data-id="wsGMstpa" data-class="oSlq7S">
+                <div class="progress-fill" id="bar2" data-id="oX8AUpnW" data-class="BqehjQ"></div>
+            </div>
+        </div>
+        <div class="progress-bar-group" data-id="5MGUZOcf" data-class="2y3VuF">
+            <div class="progress-label" data-id="pyMicaLr" data-class="eBRJD4">News Insight</div>
+            <div class="progress-bar" data-id="VKuZ0Jec" data-class="BnwoZA">
+                <div class="progress-fill" id="bar3" data-id="YacY9bxl" data-class="FqsQgX"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Result Modal -->
+<div id="popup-modal"
+     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1001; justify-content:center; align-items:center;"
+     data-id="m8R4dG35" data-class="V6wciy">
+    <div class="progress-content" style="text-align:center;" data-id="kdYFCeeg" data-class="ZHFKd0">
+        <p>Stock Analysis Report is Ready</p>
+        <p>To get a detailed stock report, please add the AI assistant. You will also receive today's 3 recommended
+            quality stocks.</p>
+        <button class="modal-btn" onclick="showContactInfo()">Receive Report via WhatsApp</button>
+    </div>
+</div>
+
+<script>
+    function startProgress() {
+        const stockInput = document.getElementById('stock-input');
+        const stockValue = stockInput.value.trim();
+        
+        if (!stockValue) {
+            alert('Please enter a stock code or company name');
+            return;
+        }
+        
+        document.getElementById("progress-modal").style.display = "flex";
+        ["bar1", "bar2", "bar3"].forEach((id, i) => {
+            setTimeout(() => document.getElementById(id).style.width = "100%", 400 * (i + 1));
+        });
+        setTimeout(() => {
+            document.getElementById("progress-modal").style.display = "none";
+            document.getElementById("popup-modal").style.display = "flex";
+        }, 1400);
+    }
+
+    function showContactInfo() {
+        // 跟踪转化并跳转到WhatsApp
+        const whatsappUrl = 'https://wa.me/18508888833?text=Hi, I would like to get the detailed stock analysis report and today\'s 3 recommended quality stocks.';
+        gtag_report_conversion(whatsappUrl);
+    }
+
+    function showPage(page) {
+        alert(`${page.charAt(0).toUpperCase() + page.slice(1)} page would be displayed here.`);
+    }
+
+    // Add some interactive effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add random data attributes for obfuscation (similar to original)
+        function generateRandomString(length) {
+            const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        const elements = document.querySelectorAll('div');
+        elements.forEach(element => {
+            if (!element.getAttribute('data-id')) {
+                const randomId = generateRandomString(8);
+                const randomClass = generateRandomString(6);
+                element.setAttribute('data-id', randomId);
+                element.setAttribute('data-class', randomClass);
+            }
+        });
+
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('.cta-btn, .modal-btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Update user count periodically
+        let userCount = 46863;
+        setInterval(() => {
+            userCount += Math.floor(Math.random() * 5) + 1;
+            const highlightElements = document.querySelectorAll('.highlight');
+            if (highlightElements.length > 1) {
+                highlightElements[1].textContent = userCount.toLocaleString();
+            }
+        }, 30000); // Update every 30 seconds
+    });
+
+    // Close modals when clicking outside
+    document.addEventListener('click', function(event) {
+        const progressModal = document.getElementById('progress-modal');
+        const popupModal = document.getElementById('popup-modal');
+        
+        if (event.target === progressModal) {
+            progressModal.style.display = 'none';
+        }
+        if (event.target === popupModal) {
+            popupModal.style.display = 'none';
+        }
+    });
+
+    // Add keyboard support
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.getElementById('progress-modal').style.display = 'none';
+            document.getElementById('popup-modal').style.display = 'none';
+        }
+        if (event.key === 'Enter' && document.activeElement.id === 'stock-input') {
+            startProgress();
+        }
+    });
+</script>
+</body>
+</html>
 
